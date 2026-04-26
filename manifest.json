@@ -1,0 +1,33 @@
+{
+  "description": "Moss 智能进化套件 —— Think-Act-Observe-Repeat 自驱动闭环",
+  "version": "2.0.0",
+  "min_openclaw_version": "2026.4.22",
+
+  "plugins": {
+    "evolution-kit": {
+      "enabled": true,
+      "config": {
+        "auto_update": true,
+        "check_interval_hours": 24,
+        "nightly_check_enabled": true,
+        "evolution_workspace": "~/.openclaw/evolution_workspace/ai_evolution_chamber"
+      }
+    },
+    "evolution-kit.taor": {
+      "enabled": false,
+      "config": {
+        "default_thinker": "LiftedLLMThinker",
+        "max_cycles": 10,
+        "auto_compact_threshold_tokens": 80000,
+        "stall_limit": 3
+      }
+    },
+    "evolution-kit.tools": {
+      "enabled": false,
+      "config": {
+        "auto_register": true,
+        "default_tools": ["FileRead", "FileWrite", "WebFetch", "ShellExec", "MemoryQuery", "DiffMerge", "MetaPrompt"]
+      }
+    }
+  }
+}

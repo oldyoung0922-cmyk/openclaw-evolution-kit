@@ -1,0 +1,26 @@
+{
+  "agents": {
+    "defaults": {
+      "heartbeat": {
+        "every": "30m",
+        "tasks": [
+          "nightly_check",
+          "tool_discovery"
+        ]
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "auto_compact_threshold_tokens": 80000
+      }
+    }
+  },
+  "memory": {
+    "nightly_check": {
+      "enabled": true,
+      "window_start": "22:00",
+      "window_end": "02:00",
+      "state_file": "~/.openclaw/evolution_workspace/ai_evolution_chamber/nightly_state.json",
+      "script": "~/.openclaw/evolution_workspace/ai_evolution_chamber/scripts/nightly_check.py"
+    }
+  }
+}
