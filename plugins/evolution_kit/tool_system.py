@@ -10,6 +10,8 @@ evolution_kit.tool_system — 组合式核心工具原语系统
 - ToolRegistry 支持自动发现和注册
 """
 
+from __future__ import annotations
+
 import abc
 import hashlib
 import json

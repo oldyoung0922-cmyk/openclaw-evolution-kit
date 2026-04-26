@@ -10,6 +10,8 @@ evolution_kit.taor_engine — Self-Driven Think-Act-Observe-Repeat Cycle
 - 恢复 stall 检测：连续相同 action 时强制重新思考
 """
 
+from __future__ import annotations
+
 import abc
 import time
 import logging
